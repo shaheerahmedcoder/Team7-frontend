@@ -261,7 +261,3 @@ npx expo start
 This project was developed for academic purposes as part of the Mobile App Development course at UBIT, University of Karachi.
 
 ---
-
-<div align="center">
-  Made with ❤️ by Team 7 — UBIT, University of Karachi
-</div>
