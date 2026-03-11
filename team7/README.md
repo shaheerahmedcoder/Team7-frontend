@@ -6,13 +6,9 @@
 ![Team](https://img.shields.io/badge/Team-7-crimson?style=for-the-badge)
 
 ## 🏫 App UI
-![WhatsApp Image 2026-03-11 at 8 13 39 AM](https://github.com/user-attachments/assets/b1186426-b5ec-4742-9147-b523f5473b6f)
+![WhatsApp Image 2026-03-11 at 8 13 39 AM](https://github.com/user-attachments/assets/b1186426-b5ec-4742-9147-b523f5473b6f) ![WhatsApp Image 2026-03-11 at 8 16 53 AM](https://github.com/user-attachments/assets/9fc069b5-0793-4407-ba0d-82788662451c)
 
-![WhatsApp Image 2026-03-11 at 8 16 53 AM](https://github.com/user-attachments/assets/9fc069b5-0793-4407-ba0d-82788662451c)
-
-![WhatsApp Image 2026-03-11 at 8 17 46 AM](https://github.com/user-attachments/assets/84e080d4-2407-429d-9b1d-998d5b3f995c)
-
-![WhatsApp Image 2026-03-11 at 8 18 43 AM](https://github.com/user-attachments/assets/d4a80c8b-217f-485b-9354-007d9e832c66)
+![WhatsApp Image 2026-03-11 at 8 17 46 AM](https://github.com/user-attachments/assets/84e080d4-2407-429d-9b1d-998d5b3f995c) ![WhatsApp Image 2026-03-11 at 8 18 43 AM](https://github.com/user-attachments/assets/d4a80c8b-217f-485b-9354-007d9e832c66)
 
 
 ---
