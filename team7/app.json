@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "team7",
-    "slug": "team7",
+    "name": "proj-ubit",
+    "slug": "proj-ubit",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "team7",
+    "scheme": "projubit",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -38,7 +38,8 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,
