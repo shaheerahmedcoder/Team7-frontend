@@ -1,9 +1,16 @@
-# 📢 Campus Connect — Notice Board Feature
+# 📢 Team 7 — Notice Board Feature
 
 ![React Native](https://img.shields.io/badge/React_Native-Expo-blue?style=for-the-badge&logo=react)
 ![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-lightgrey?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Frontend%20Complete-success?style=for-the-badge)
 ![Team](https://img.shields.io/badge/Team-7-crimson?style=for-the-badge)
+
+## 🏫 App UI
+![WhatsApp Image 2026-03-11 at 8 13 39 AM](https://github.com/user-attachments/assets/b1186426-b5ec-4742-9147-b523f5473b6f)
+![WhatsApp Image 2026-03-11 at 8 16 53 AM](https://github.com/user-attachments/assets/9fc069b5-0793-4407-ba0d-82788662451c)
+![WhatsApp Image 2026-03-11 at 8 17 46 AM](https://github.com/user-attachments/assets/84e080d4-2407-429d-9b1d-998d5b3f995c)
+![WhatsApp Image 2026-03-11 at 8 18 43 AM](https://github.com/user-attachments/assets/d4a80c8b-217f-485b-9354-007d9e832c66)
+
 
 ---
 
@@ -14,7 +21,7 @@
 | **University** | UBIT — University of Karachi |
 | **Department** | Department of Computer Science |
 | **Course** | Mobile App Development |
-| **Instructor** | TBD |
+| **Instructor** | Bilal Ahmed |
 | **Project** | Campus Connect — Student Portal App |
 | **Team** | Team 7 |
 | **Feature** | Notice Board |
@@ -26,11 +33,11 @@
 | # | Name | Seat No |
 |---|---|---|
 | 1 | Shaheer Ahmed | B23110006154 |
-| 2 | TBD | TBD |
-| 3 | TBD | TBD |
-| 4 | TBD | TBD |
-| 5 | TBD | TBD |
-| 6 | TBD | TBD |
+| 2 | TBD | B23 |
+| 3 | TBD | B23 |
+| 4 | TBD | B23 |
+| 5 | TBD | B23 |
+| 6 | TBD | B23 |
 
 ---
 
@@ -256,8 +263,3 @@ npx expo start
 
 ---
 
-## 📃 License
-
-This project was developed for academic purposes as part of the Mobile App Development course at UBIT, University of Karachi.
-
----
