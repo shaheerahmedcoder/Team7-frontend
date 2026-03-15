@@ -59,7 +59,7 @@ The main landing screen of the Notice Board feature.
 - Unread notices are marked with a red dot indicator
 - Filter pills to sort by: **All / Exams / Events / Academic / General**
 - Search bar to find specific notices
-- Floating **"+" FAB button** (bottom-right) for admin access
+- Floating **"+" FAB button** (at bottom-right) for admin access
 - Long pressing the FAB shows **"Admin Access Only 🔒"** tooltip
 
 ---
