@@ -23,7 +23,7 @@
 | **Instructor** | Bilal Ahmed |
 | **Project** | Campus Connect — Student Portal App |
 | **Team** | Team 7 |
-| **Feature** | Notice Board |
+| **Feature** | Notice Board Screens |
 
 ---
 
