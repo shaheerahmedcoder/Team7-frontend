@@ -1,3 +1,6 @@
+//Purpose of the file:
+//Routes between notice screens like post notice , notice details one and notice board too
+
 import CustomBottomNav from '@/components/CustomBottomNav';
 import { Stack } from 'expo-router';
 
