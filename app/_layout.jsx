@@ -1,3 +1,6 @@
+//Purpose of the file:
+//for routing the screens or adding new routes
+
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { useState } from "react";
