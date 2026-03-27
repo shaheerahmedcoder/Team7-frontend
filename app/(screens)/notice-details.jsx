@@ -1,3 +1,6 @@
+//Purpose of the file:
+//So in this file, it's the whole logic for the notice details screen, contains notices details and some other info
+
 import CustomText from '@/components/CustomText';
 import NoticeBadge from '@/components/notice/notice-badge';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -19,7 +22,7 @@ const NOTICES_DATA = [
             type: 'PDF'
         }
     },
-    // ... other notices could be added here
+    // other notices could be added here
 ];
 
 const NoticeDetails = () => {
