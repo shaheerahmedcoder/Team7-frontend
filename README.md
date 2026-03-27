@@ -1,4 +1,4 @@
-# Team 7 — Notice Board Feature
+# Team 7: Notice Board Feature
 
 ## App UI
 ![WhatsApp Image 2026-03-11 at 8 13 39 AM](https://github.com/user-attachments/assets/b1186426-b5ec-4742-9147-b523f5473b6f) ![WhatsApp Image 2026-03-11 at 8 16 53 AM](https://github.com/user-attachments/assets/9fc069b5-0793-4407-ba0d-82788662451c)
