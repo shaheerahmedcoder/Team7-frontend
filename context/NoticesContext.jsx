@@ -1,3 +1,5 @@
+// All the notices are here we will be adding relevant notices soon!
+
 import { createContext, useContext, useState } from 'react';
 
 const DUMMY_NOTICES = [
