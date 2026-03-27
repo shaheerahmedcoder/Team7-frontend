@@ -1,3 +1,6 @@
+//Purpose of the file:
+//So below is the simple component for the notice badge. Which we have used in our screens mutiple times.
+
 import CustomText from '@/components/CustomText';
 import { StyleSheet, View } from 'react-native';
 
