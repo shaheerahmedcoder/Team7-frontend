@@ -1,3 +1,6 @@
+//Purpose of the file:
+//Simple reusable component for notice filter
+
 import CustomText from '@/components/CustomText';
 import { ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
 
