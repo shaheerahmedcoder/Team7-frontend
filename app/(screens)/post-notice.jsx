@@ -1,3 +1,6 @@
+// Purpose of the file:
+// Contains all logics, including posting the notices, category selection and the attachment section too
+
 import CustomText from '@/components/CustomText';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Picker } from '@react-native-picker/picker';
