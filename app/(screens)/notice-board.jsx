@@ -1,3 +1,6 @@
+//Purpose of the file:
+//So in this file, it's the whole logic for the notice board screen, including adding search query, search filter, filtering notices, and all related stuff
+
 import CustomText from '@/components/CustomText';
 import NoticeCard from '@/components/notice/notice-card';
 import NoticeFilter from '@/components/notice/notice-filter';
