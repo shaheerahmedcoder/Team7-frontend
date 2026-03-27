@@ -1,3 +1,6 @@
+//Purpose of the file:
+//So this file contains all the stuff related to admin login page with dummy credentials for now 
+
 import CustomButton from "@/components/CustomButton";
 import CustomText from "@/components/CustomText";
 import FloatingLabelInput from "@/components/FloatingLabelInput";
