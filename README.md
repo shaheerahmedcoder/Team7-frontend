@@ -1,11 +1,6 @@
-# 📢 Team 7 — Notice Board Feature
+# Team 7 — Notice Board Feature
 
-![React Native](https://img.shields.io/badge/React_Native-Expo-blue?style=for-the-badge&logo=react)
-![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20Android-lightgrey?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Frontend%20Complete-success?style=for-the-badge)
-![Team](https://img.shields.io/badge/Team-7-crimson?style=for-the-badge)
-
-## 🏫 App UI
+## App UI
 ![WhatsApp Image 2026-03-11 at 8 13 39 AM](https://github.com/user-attachments/assets/b1186426-b5ec-4742-9147-b523f5473b6f) ![WhatsApp Image 2026-03-11 at 8 16 53 AM](https://github.com/user-attachments/assets/9fc069b5-0793-4407-ba0d-82788662451c)
 
 ![WhatsApp Image 2026-03-11 at 8 17 46 AM](https://github.com/user-attachments/assets/84e080d4-2407-429d-9b1d-998d5b3f995c) ![WhatsApp Image 2026-03-11 at 8 18 43 AM](https://github.com/user-attachments/assets/d4a80c8b-217f-485b-9354-007d9e832c66)
@@ -13,7 +8,7 @@
 
 ---
 
-## 🏫 Project Info
+## Project Info
 
 | Field | Details |
 |---|---|
@@ -21,26 +16,25 @@
 | **Department** | Department of Computer Science |
 | **Course** | Mobile App Development |
 | **Instructor** | Bilal Ahmed |
-| **Project** | Campus Connect — Student Portal App |
 | **Team** | Team 7 |
 | **Feature** | Notice Board Screens |
 
 ---
 
-## 👥 Team Members
+## Team Members
 
 | # | Name | Seat No |
 |---|---|---|
 | 1 | Shaheer Ahmed | B23110006154 |
-| 2 | TBD | B23 |
-| 3 | TBD | B23 |
-| 4 | TBD | B23 |
-| 5 | TBD | B23 |
-| 6 | TBD | B23 |
+| 2 | - | B23 |
+| 3 | - | B23 |
+| 4 | - | B23 |
+| 5 | - | B23 |
+| 6 | - | B23 |
 
 ---
 
-## 📱 About This Feature
+## About This Feature
 
 The **Notice Board** is a centralized announcement and communication hub built into the Campus Connect student portal app. It allows the university to broadcast important notices to all students, and enables authorized admins to create and publish notices — all within the same mobile application.
 
@@ -48,9 +42,9 @@ This feature was developed by **Team 7** as part of the collaborative final proj
 
 ---
 
-## 🗂️ Screens Overview
+## Screens Overview
 
-### 1. 📋 Notice Board (Notice List)
+### 1. Notice Board (Notice List)
 The main landing screen of the Notice Board feature.
 
 **What it does:**
@@ -64,7 +58,7 @@ The main landing screen of the Notice Board feature.
 
 ---
 
-### 2. 📄 Notice Details
+### 2. Notice Details
 Full reading view of a selected notice.
 
 **What it does:**
@@ -76,7 +70,7 @@ Full reading view of a selected notice.
 
 ---
 
-### 3. 🔐 Admin Login
+### 3. Admin Login
 Restricted login screen for authorized admin users only.
 
 **What it does:**
@@ -92,7 +86,7 @@ Restricted login screen for authorized admin users only.
 
 ---
 
-### 4. ✏️ Post Notice (Admin Only)
+### 4. Post Notice (Admin Only)
 Form screen for admins to create and publish new notices.
 
 **What it does:**
@@ -104,7 +98,7 @@ Form screen for admins to create and publish new notices.
 
 ---
 
-## 🔄 Complete App Flow
+## Complete App Flow
 
 ```
 STUDENT LOGIN
@@ -122,7 +116,7 @@ NOTICE BOARD (List)
 
 ---
 
-## 🧭 Navigation Map
+## Navigation Map
 
 | From | Action | To |
 |---|---|---|
@@ -139,7 +133,7 @@ NOTICE BOARD (List)
 
 ---
 
-## 🗃️ File Structure
+## File Structure
 
 ```
 app/
@@ -175,7 +169,7 @@ context/
 
 ---
 
-## ⚙️ State Management
+## State Management
 
 Since there is no backend yet, notices are managed using **React Context API.**
 
@@ -186,7 +180,7 @@ Since there is no backend yet, notices are managed using **React Context API.**
 
 ---
 
-## 🎨 Design System
+## Design System
 
 | Element | Value |
 |---|---|
@@ -195,9 +189,6 @@ Since there is no backend yet, notices are managed using **React Context API.**
 | **Surface/Cards** | White with soft shadow |
 | **Text Primary** | Dark `#1A1A1A` |
 | **Text Secondary** | Grey `#666666` |
-| **Border Radius** | 12px (cards), 8px (inputs) |
-| **Design Tool** | Stitch |
-| **Framework** | React Native + Expo Router |
 
 ### Category Badge Colors
 | Category | Color |
@@ -209,7 +200,7 @@ Since there is no backend yet, notices are managed using **React Context API.**
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js installed
@@ -239,19 +230,19 @@ npx expo start
 
 ---
 
-## 🔮 Future Improvements (When Backend is Added)
+##  Future Improvements (When Backend is Added)
 
-- [ ] Replace hardcoded admin credentials with real authentication API
-- [ ] Connect Notice Board to a live database (notices persist after app close)
-- [ ] Push notifications for new notices
-- [ ] Admin role management (multiple admins)
-- [ ] Notice edit and delete functionality
-- [ ] File attachment upload to cloud storage
-- [ ] Read/unread status synced across devices
+- Replace hardcoded admin credentials with real authentication API
+- Connect Notice Board to a live database (notices persist after app close)
+- Push notifications for new notices
+- Admin role management (multiple admins)
+- Notice edit and delete functionality
+- File attachment upload to cloud storage
+- Read/unread status synced across devices
 
 ---
 
-## 📌 Notes for Team Members
+## Notes for Team Members
 
 > **For merging into the main project:**
 > 1. Do NOT modify any of sir's existing screen files
