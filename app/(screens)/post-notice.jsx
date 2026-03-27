@@ -1,5 +1,5 @@
 // Purpose of the file:
-// Contains all logics, including posting the notices, category selection and the attachment section too
+// Contains all logic, including posting the notices, category selection and the attachment section too
 
 import CustomText from '@/components/CustomText';
 import { MaterialIcons } from '@expo/vector-icons';
