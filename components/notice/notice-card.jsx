@@ -1,3 +1,6 @@
+//Purpose of the file:
+//Below is the component of notice card, that we have used in our screens
+
 import CustomText from '@/components/CustomText';
 import { MaterialIcons } from '@expo/vector-icons';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
