@@ -1,10 +1,14 @@
 # Team 7: Notice Board Feature
 
+## App Demo
+
+https://github.com/user-attachments/assets/33c3b821-73b8-44f2-a279-81f9776dc61a
+
+
 ## App UI
 ![WhatsApp Image 2026-03-11 at 8 13 39 AM](https://github.com/user-attachments/assets/b1186426-b5ec-4742-9147-b523f5473b6f) ![WhatsApp Image 2026-03-11 at 8 16 53 AM](https://github.com/user-attachments/assets/9fc069b5-0793-4407-ba0d-82788662451c)
 
 ![WhatsApp Image 2026-03-11 at 8 17 46 AM](https://github.com/user-attachments/assets/84e080d4-2407-429d-9b1d-998d5b3f995c) ![WhatsApp Image 2026-03-11 at 8 18 43 AM](https://github.com/user-attachments/assets/d4a80c8b-217f-485b-9354-007d9e832c66)
-
 
 ---
 
@@ -244,12 +248,9 @@ npx expo start
 
 ## Notes for Team Members
 
-> **For merging into the main project:**
 > 1. Do NOT modify any of sir's existing screen files
 > 2. Only add the new files listed in the file structure above
-> 3. Update `app/(screens)/_layout.jsx` to register new routes
-> 4. Wrap root layout in `NoticesProvider` from context
-> 5. Add `onPress` to the Campus Quick Action in `home.jsx`
+> 3. Have added the purpose of each file, commented at the top of every file related to our screens.
 
 ---
 
