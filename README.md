@@ -30,7 +30,7 @@ https://github.com/user-attachments/assets/33c3b821-73b8-44f2-a279-81f9776dc61a
 | # | Name | Seat No |
 |---|---|---|
 | 1 | Shaheer Ahmed | B23110006154 |
-| 2 | - | B23 |
+| 2 | Aaisha Iqbal  | B23110006001 |
 | 3 | - | B23 |
 | 4 | - | B23 |
 | 5 | - | B23 |
