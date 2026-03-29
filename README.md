@@ -4,8 +4,8 @@
 
 https://github.com/user-attachments/assets/33c3b821-73b8-44f2-a279-81f9776dc61a
 
-
 ## App UI
+
 ![WhatsApp Image 2026-03-11 at 8 13 39 AM](https://github.com/user-attachments/assets/b1186426-b5ec-4742-9147-b523f5473b6f) ![WhatsApp Image 2026-03-11 at 8 16 53 AM](https://github.com/user-attachments/assets/9fc069b5-0793-4407-ba0d-82788662451c)
 
 ![WhatsApp Image 2026-03-11 at 8 17 46 AM](https://github.com/user-attachments/assets/84e080d4-2407-429d-9b1d-998d5b3f995c) ![WhatsApp Image 2026-03-11 at 8 18 43 AM](https://github.com/user-attachments/assets/d4a80c8b-217f-485b-9354-007d9e832c66)
@@ -14,27 +14,27 @@ https://github.com/user-attachments/assets/33c3b821-73b8-44f2-a279-81f9776dc61a
 
 ## Project Info
 
-| Field | Details |
-|---|---|
-| **University** | UBIT — University of Karachi |
+| Field          | Details                        |
+| -------------- | ------------------------------ |
+| **University** | UBIT — University of Karachi   |
 | **Department** | Department of Computer Science |
-| **Course** | Mobile App Development |
-| **Instructor** | Bilal Ahmed |
-| **Team** | Team 7 |
-| **Feature** | Notice Board Screens |
+| **Course**     | Mobile App Development         |
+| **Instructor** | Bilal Ahmed                    |
+| **Team**       | Team 7                         |
+| **Feature**    | Notice Board Screens           |
 
 ---
 
 ## Team Members
 
-| # | Name | Seat No |
-|---|---|---|
-| 1 | Shaheer Ahmed | B23110006154 |
-| 2 | Aaisha Iqbal  | B23110006001 |
-| 3 | - | B23 |
-| 4 | - | B23 |
-| 5 | - | B23 |
-| 6 | - | B23 |
+| #   | Name          | Seat No      |
+| --- | ------------- | ------------ |
+| 1   | Shaheer Ahmed | B23110006154 |
+| 2   | Aaisha Iqbal  | B23110006001 |
+| 3   | Layan Hassan  | B23110006056 |
+| 4   | -             | B23          |
+| 5   | -             | B23          |
+| 6   | -             | B23          |
 
 ---
 
@@ -49,9 +49,11 @@ This feature was developed by **Team 7** as part of the collaborative final proj
 ## Screens Overview
 
 ### 1. Notice Board (Notice List)
+
 The main landing screen of the Notice Board feature.
 
 **What it does:**
+
 - Displays a scrollable list of all published notices
 - Each card shows: title, category badge, date, and preview text
 - Unread notices are marked with a red dot indicator
@@ -63,9 +65,11 @@ The main landing screen of the Notice Board feature.
 ---
 
 ### 2. Notice Details
+
 Full reading view of a selected notice.
 
 **What it does:**
+
 - Displays full notice title, category badge, posted date and author
 - Complete notice body text
 - Attachment section with file name and View button
@@ -75,9 +79,11 @@ Full reading view of a selected notice.
 ---
 
 ### 3. Admin Login
+
 Restricted login screen for authorized admin users only.
 
 **What it does:**
+
 - Separate from student login — admin-only credentials
 - Shows error message for wrong credentials
 - Redirects to Post Notice screen on successful login
@@ -85,15 +91,18 @@ Restricted login screen for authorized admin users only.
 - Hardcoded credentials for frontend demo (backend to be integrated later)
 
 > **Demo Credentials:**
+>
 > - Email: `admin@ubit.edu.pk`
 > - Password: `admin123`
 
 ---
 
 ### 4. Post Notice (Admin Only)
+
 Form screen for admins to create and publish new notices.
 
 **What it does:**
+
 - Input fields: Notice Title, Category (Exam/Event/Academic/General), Notice Body
 - Optional file attachment
 - **Publish Notice** → adds notice to top of Notice Board list
@@ -122,18 +131,18 @@ NOTICE BOARD (List)
 
 ## Navigation Map
 
-| From | Action | To |
-|---|---|---|
-| Home Dashboard | Tap "Campus" Quick Action | Notice Board |
-| Notice Board | Tap any notice card | Notice Details |
-| Notice Board | Tap "+" FAB | Admin Login |
-| Notice Board | Long press "+" FAB | Show tooltip |
-| Notice Details | Tap back | Notice Board |
-| Notice Board | Tap back | Home Dashboard |
-| Admin Login | Correct credentials | Post Notice |
-| Admin Login | Wrong credentials | Error message (stay) |
-| Post Notice | Tap Publish | Notice Board (notice added) |
-| Post Notice | Tap Save as Draft | Notice Board (no change) |
+| From           | Action                    | To                          |
+| -------------- | ------------------------- | --------------------------- |
+| Home Dashboard | Tap "Campus" Quick Action | Notice Board                |
+| Notice Board   | Tap any notice card       | Notice Details              |
+| Notice Board   | Tap "+" FAB               | Admin Login                 |
+| Notice Board   | Long press "+" FAB        | Show tooltip                |
+| Notice Details | Tap back                  | Notice Board                |
+| Notice Board   | Tap back                  | Home Dashboard              |
+| Admin Login    | Correct credentials       | Post Notice                 |
+| Admin Login    | Wrong credentials         | Error message (stay)        |
+| Post Notice    | Tap Publish               | Notice Board (notice added) |
+| Post Notice    | Tap Save as Draft         | Notice Board (no change)    |
 
 ---
 
@@ -186,20 +195,21 @@ Since there is no backend yet, notices are managed using **React Context API.**
 
 ## Design System
 
-| Element | Value |
-|---|---|
-| **Primary Color** | Crimson Red `#8B0000` |
-| **Background** | White `#FFFFFF` |
-| **Surface/Cards** | White with soft shadow |
-| **Text Primary** | Dark `#1A1A1A` |
-| **Text Secondary** | Grey `#666666` |
+| Element            | Value                  |
+| ------------------ | ---------------------- |
+| **Primary Color**  | Crimson Red `#8B0000`  |
+| **Background**     | White `#FFFFFF`        |
+| **Surface/Cards**  | White with soft shadow |
+| **Text Primary**   | Dark `#1A1A1A`         |
+| **Text Secondary** | Grey `#666666`         |
 
 ### Category Badge Colors
-| Category | Color |
-|---|---|
-| EXAM | Red |
-| EVENT | Blue |
-| GENERAL | Green |
+
+| Category | Color         |
+| -------- | ------------- |
+| EXAM     | Red           |
+| EVENT    | Blue          |
+| GENERAL  | Green         |
 | ACADEMIC | Orange/Yellow |
 
 ---
@@ -207,6 +217,7 @@ Since there is no backend yet, notices are managed using **React Context API.**
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js installed
 - Expo CLI installed
 - iOS Simulator / Android Emulator or Expo Go app on phone
@@ -228,13 +239,14 @@ npx expo start
 ```
 
 ### Running on Device
+
 - Scan the QR code with **Expo Go** app (Android)
 - Press `i` for iOS Simulator
 - Press `a` for Android Emulator
 
 ---
 
-##  Future Improvements (When Backend is Added)
+## Future Improvements (When Backend is Added)
 
 - Replace hardcoded admin credentials with real authentication API
 - Connect Notice Board to a live database (notices persist after app close)
@@ -253,4 +265,3 @@ npx expo start
 > 3. Have added the purpose of each file, commented at the top of every file related to our screens.
 
 ---
-
