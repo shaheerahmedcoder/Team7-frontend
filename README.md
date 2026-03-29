@@ -32,7 +32,7 @@ https://github.com/user-attachments/assets/33c3b821-73b8-44f2-a279-81f9776dc61a
 | 1   | Shaheer Ahmed | B23110006154 |
 | 2   | Aaisha Iqbal  | B23110006001 |
 | 3   | Layan Hassan  | B23110006056 |
-| 4   | -             | B23          |
+| 4   | M Bilal Atif  | B23110006057 |
 | 5   | -             | B23          |
 | 6   | -             | B23          |
 
