@@ -34,7 +34,7 @@ https://github.com/user-attachments/assets/33c3b821-73b8-44f2-a279-81f9776dc61a
 | 3   | Layan Hassan  | B23110006056 |
 | 4   | M Bilal Atif  | B23110006057 |
 | 5   | Haleema Fatima| B23110006036 |
-| 6   | -             | B23          |
+| 6   | Javeria Amir  | B23110006049 |
 
 ---
 
