@@ -8,11 +8,14 @@ import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTheme } from '../../theme/useTheme';
+import Animated, { FadeInUp } from 'react-native-reanimated';
 
 const HomeScreen = () => {
     const router = useRouter();
+    const { colors, isDark } = useTheme();
     const cardsData = [
-        { name: 'Timetable', iconName: '1k', iconColor: '#800000' },
+        { name: 'Timetable', iconName: '1k', iconColor: colors.primary },
         { name: 'Records', iconName: '2k', iconColor: '#1950c7' },
         { name: 'Attendance', iconName: '3k', iconColor: '#338000' },
         { name: 'Campus', iconName: '4k', iconColor: '#805e00' },
@@ -25,8 +28,8 @@ const HomeScreen = () => {
     ]
 
     return (
-        <SafeAreaView style={{ flex: 1 }}>
-            <StatusBar style="automatic" />
+        <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
+            <StatusBar style={isDark ? "light" : "dark"} />
 
             <DashboardHeader />
             <ScrollView vertical showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 70 }}>
@@ -35,7 +38,7 @@ const HomeScreen = () => {
                     imageSource={require('@/assets/images/ubit-facade.jpg')}
                 />
 
-                <CustomText style={{ fontSize: 18, marginHorizontal: 20, marginTop: 10 }}>Quick Actions</CustomText>
+                <CustomText style={{ fontSize: 18, marginHorizontal: 20, marginTop: 10, color: colors.text }}>Quick Actions</CustomText>
                 <View style={{
                     flexDirection: 'row',
                     flexWrap: 'wrap',
@@ -44,40 +47,41 @@ const HomeScreen = () => {
                     marginHorizontal: 10,
                 }}>
                     {cardsData.map((item, index) => (
-                        <DashboardCard
-                            key={index}
-                            title={item.name}
-                            description={`View your ${item.name.toLowerCase()} details and updates.`}
-                            iconName={item.iconName}
-                            iconColor={item.iconColor}
+                        <Animated.View key={index} entering={FadeInUp.delay(index * 100).springify()} style={{ width: '48%' }}>
+                            <DashboardCard
+                                title={item.name}
+                                description={`View your ${item.name.toLowerCase()} details and updates.`}
+                                iconName={item.iconName}
+                                iconColor={item.iconColor}
 
-                            onPress={() => {
-                                if (item.name === 'Campus') {
-                                    router.push('/(screens)/notice-board');
-                                }
-                            }}
-                            style={{ width: '48%', marginBottom: 15 }}
-                        />
+                                onPress={() => {
+                                    if (item.name === 'Campus') {
+                                        router.push('/(screens)/notice-board');
+                                    }
+                                }}
+                                style={{ width: '100%' }}
+                            />
+                        </Animated.View>
                     ))}
                 </View>
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: 20, marginVertical: 10 }}>
-                    <CustomText style={{ fontSize: 18 }}>Recent Announcements</CustomText>
+                    <CustomText style={{ fontSize: 18, color: colors.text }}>Recent Announcements</CustomText>
                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginBottom: 4 }}>
-                        <CustomText style={{ fontSize: 14, lineHeight: 15 }} onPress={() => { }} >History</CustomText>
-                        <MaterialIcons name="arrow-forward-ios" size={12} onPress={() => { }} />
+                        <CustomText style={{ fontSize: 14, lineHeight: 15, color: colors.primary }} onPress={() => { }} >History</CustomText>
+                        <MaterialIcons name="arrow-forward-ios" size={12} color={colors.primary} onPress={() => { }} />
                     </View>
                 </View>
 
                 {announcementsData.map((item, index) => (
-                    <View key={index} style={{ marginHorizontal: 20, marginBottom: 15 }}>
+                    <Animated.View key={index} entering={FadeInUp.delay((index + 4) * 100).springify()} style={{ marginHorizontal: 20, marginBottom: 15 }}>
                         <AnnoucementCard
                             title={item.title}
                             description={item.description}
                             date={item.date}
                             icon={item.icon}
                         />
-                    </View>
+                    </Animated.View>
                 ))}
             </ScrollView>
         </SafeAreaView>

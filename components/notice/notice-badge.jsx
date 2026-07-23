@@ -2,13 +2,15 @@
 //So below is the simple component for the notice badge. Which we have used in our screens mutiple times.
 
 import CustomText from '@/components/CustomText';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
+import { useTheme } from '../../theme/useTheme';
 
 const NoticeBadge = ({ category }) => {
+    const { colors } = useTheme();
     const getBadgeStyles = () => {
         switch (category?.toLowerCase()) {
             case 'exam':
-                return { backgroundColor: '#8a0000', label: 'EXAM' };
+                return { backgroundColor: colors.primary, label: 'EXAM' };
             case 'event':
             case 'events':
                 return { backgroundColor: '#1d4ed8', label: 'EVENT' };
@@ -19,32 +21,17 @@ const NoticeBadge = ({ category }) => {
             case 'emergency':
                 return { backgroundColor: '#dc2626', label: 'EMERGENCY' };
             default:
-                return { backgroundColor: '#64748b', label: category?.toUpperCase() || 'NOTICE' };
+                return { backgroundColor: colors.icon, label: category?.toUpperCase() || 'NOTICE' };
         }
     };
 
     const { backgroundColor, label } = getBadgeStyles();
 
     return (
-        <View style={[styles.badge, { backgroundColor }]}>
-            <CustomText style={styles.text}>{label}</CustomText>
+        <View style={{ paddingHorizontal: 8, paddingVertical: 2, borderRadius: 4, alignSelf: 'flex-start', backgroundColor }}>
+            <CustomText style={{ color: '#fff', fontSize: 10, fontFamily: 'Poppins-Bold', letterSpacing: 0.5 }}>{label}</CustomText>
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    badge: {
-        paddingHorizontal: 8,
-        paddingVertical: 2,
-        borderRadius: 4,
-        alignSelf: 'flex-start',
-    },
-    text: {
-        color: '#fff',
-        fontSize: 10,
-        fontFamily: 'Poppins-Bold',
-        letterSpacing: 0.5,
-    },
-});
 
 export default NoticeBadge;

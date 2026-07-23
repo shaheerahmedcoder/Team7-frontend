@@ -1,36 +1,56 @@
 import { MaterialIcons } from '@expo/vector-icons';
-import { Text, TouchableOpacity } from 'react-native';
+import { Pressable } from 'react-native';
+import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
+import CustomText from './CustomText';
+import { useTheme } from '../theme/useTheme';
 
 const CustomButton = ({ text, icon, style, onPress }) => {
+    const scale = useSharedValue(1);
+    const { colors } = useTheme();
+
+    const animatedStyle = useAnimatedStyle(() => {
+        return {
+            transform: [{ scale: scale.value }],
+        };
+    });
+
+    const handlePressIn = () => {
+        scale.value = withSpring(0.95, { stiffness: 400, damping: 10 });
+    };
+
+    const handlePressOut = () => {
+        scale.value = withSpring(1, { stiffness: 400, damping: 10 });
+    };
 
     return (
-        <TouchableOpacity
-            onPress={onPress}
-            activeOpacity={0.8}
-            style={{
-                backgroundColor: '#800000',
-                paddingVertical: 14,
-                paddingHorizontal: 18,
-                borderRadius: 8,
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-                ...style,
-            }}
-        >
-            <Text
+        <Animated.View style={[animatedStyle, style]}>
+            <Pressable
+                onPress={onPress}
+                onPressIn={handlePressIn}
+                onPressOut={handlePressOut}
                 style={{
-                    color: '#fff',
-                    fontFamily: 'Poppins-SemiBold',
-                    fontSize: 14,
-                    marginRight: 8,
-                    marginTop: 3,
+                    backgroundColor: colors.primary,
+                    paddingVertical: 14,
+                    paddingHorizontal: 18,
+                    borderRadius: 8,
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                 }}
             >
-                {text}
-            </Text>
-            {icon && <MaterialIcons name={icon} color='#fff' size={18} />}
-        </TouchableOpacity >
+                <CustomText
+                    style={{
+                        color: '#fff',
+                        fontFamily: 'Poppins-SemiBold',
+                        fontSize: 14,
+                        marginRight: 8,
+                    }}
+                >
+                    {text}
+                </CustomText>
+                {icon && <MaterialIcons name={icon} color='#fff' size={18} />}
+            </Pressable>
+        </Animated.View>
     );
 }
 

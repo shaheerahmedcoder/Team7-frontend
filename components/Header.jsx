@@ -1,8 +1,12 @@
 import { MaterialIcons } from '@react-native-vector-icons/material-icons';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import CustomText from './CustomText';
+import { useTheme } from '../theme/useTheme';
+import { useRouter } from 'expo-router';
 
 const Header = ({ leftIcon, rightIcon }) => {
+    const { colors } = useTheme();
+    const router = useRouter();
     return (
         <View
             style={{
@@ -12,9 +16,13 @@ const Header = ({ leftIcon, rightIcon }) => {
                 paddingTop: 10,
             }}
         >
-            <MaterialIcons name={leftIcon} color="#ffff" size={30} />
-            <CustomText style={{ fontSize: 20, fontFamily: 'Poppins-SemiBold', color: '#ffff' }} >Student Profile</CustomText>
-            <MaterialIcons name={rightIcon} color="#ffff" size={30} />
+            <TouchableOpacity onPress={() => leftIcon === 'arrow-back' && router.back()}>
+                <MaterialIcons name={leftIcon} color={colors.headerText} size={30} />
+            </TouchableOpacity>
+            <CustomText style={{ fontSize: 20, fontFamily: 'Poppins-SemiBold', color: colors.headerText }} >Student Profile</CustomText>
+            <TouchableOpacity>
+                <MaterialIcons name={rightIcon} color={colors.headerText} size={30} />
+            </TouchableOpacity>
         </View>
     );
 }

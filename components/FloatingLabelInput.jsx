@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
-import { Animated, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Animated, Text, TextInput, View } from 'react-native';
+import { useTheme } from '../theme/useTheme';
 
 const FloatingInput = ({ label, value, onChangeText, error, ...props }) => {
     const [isFocused, setIsFocused] = useState(false);
+    const { colors } = useTheme();
 
     // Animation value: 0 is placeholder (bottom), 1 is label (top)
     const animatedIsFocused = useRef(new Animated.Value(value ? 1 : 0)).current;
@@ -29,67 +31,31 @@ const FloatingInput = ({ label, value, onChangeText, error, ...props }) => {
             inputRange: [0, 1],
             outputRange: [16, 12], // Shrinks when floating
         }),
-        color: error ? '#ff1744' : (isFocused ? '#800000' : '#868686'),
+        color: error ? '#ff1744' : (isFocused ? colors.primary : colors.textSecondary),
     };
 
     return (
-        <View style={styles.container}>
-            <Animated.Text style={[styles.label, labelStyle]}>
+        <View style={{ paddingTop: 18, width: '100%' }}>
+            <Animated.Text style={[{ position: 'absolute', left: 12, paddingHorizontal: 4, zIndex: 1, fontFamily: 'Poppins-Regular' }, labelStyle]}>
                 {label}
             </Animated.Text>
             <TextInput
                 {...props}
                 style={[
-                    styles.input,
-                    isFocused && styles.inputFocused,
-                    error && styles.inputError
+                    { height: 70, borderWidth: 1, borderColor: colors.border, borderRadius: 8, paddingHorizontal: 12, fontSize: 16, color: colors.text },
+                    isFocused && { borderColor: colors.primary, borderWidth: 1, paddingTop: 25 },
+                    error && { borderColor: '#ff1744' }
                 ]}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
                 onChangeText={onChangeText}
                 value={value}
                 blurOnSubmit
+                placeholderTextColor={colors.textSecondary}
             />
-            {error && <Text style={styles.errorText}>{error}</Text>}
+            {error && <Text style={{ color: '#ff1744', fontSize: 12, marginTop: 4, marginLeft: 12 }}>{error}</Text>}
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        paddingTop: 18,
-        width: '100%',
-    },
-    label: {
-        position: 'absolute',
-        left: 12,
-        paddingHorizontal: 4,
-        zIndex: 1,
-        fontFamily: 'Poppins-Regular',
-    },
-    input: {
-        height: 70,
-        borderWidth: 1,
-        borderColor: '#ccc',
-        borderRadius: 8,
-        paddingHorizontal: 12,
-        fontSize: 16,
-        color: '#000',
-    },
-    inputFocused: {
-        borderColor: '#800000',
-        borderWidth: 1,
-        paddingTop: 25, // Extra padding to accommodate floating label
-    },
-    inputError: {
-        borderColor: '#ff1744',
-    },
-    errorText: {
-        color: '#ff1744',
-        fontSize: 12,
-        marginTop: 4,
-        marginLeft: 12,
-    },
-});
 
 export default FloatingInput;

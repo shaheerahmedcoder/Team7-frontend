@@ -1,13 +1,15 @@
 import { MaterialIcons } from '@expo/vector-icons';
 import { View } from 'react-native';
 import CustomText from '../CustomText';
+import { useTheme } from '../../theme/useTheme';
 
 const ContactCard = ({ data }) => {
+    const { colors } = useTheme();
     return (
         <View
             style={{
                 width: '90%',
-                backgroundColor: '#ffff',
+                backgroundColor: colors.card,
                 borderRadius: 20,
                 marginTop: 20,
                 paddingVertical: 20,
@@ -16,7 +18,7 @@ const ContactCard = ({ data }) => {
                 alignSelf: 'center',
             }}
         >
-            <CustomText style={{ fontFamily: 'Poppins-SemiBold' }}                >
+            <CustomText style={{ fontFamily: 'Poppins-SemiBold', color: colors.text }}>
                 Contact Information
             </CustomText>
             <View
@@ -26,13 +28,12 @@ const ContactCard = ({ data }) => {
                     gap: 15,
                 }}
             >
-                <MaterialIcons name="email" size={24} color="#800000" backgroundColor="#8000002d" style={{ padding: 8, borderRadius: 6 }} />
+                <MaterialIcons name="email" size={24} color={colors.primary} backgroundColor={colors.primary + '2d'} style={{ padding: 8, borderRadius: 6 }} />
                 <View>
-                    <CustomText style={{ fontSize: 12, fontFamily: 'Poppins-SemiBold', color: '#818181' }}                >
+                    <CustomText style={{ fontSize: 12, fontFamily: 'Poppins-SemiBold', color: colors.textSecondary }}>
                         EMAIL ADDRESS
                     </CustomText>
-
-                    <CustomText style={{ fontSize: 16 }} >bilalahmed2520@gmail.com</CustomText>
+                    <CustomText style={{ fontSize: 16, color: colors.text }}>bilalahmed2520@gmail.com</CustomText>
                 </View>
             </View>
 
@@ -43,13 +44,12 @@ const ContactCard = ({ data }) => {
                     gap: 15,
                 }}
             >
-                <MaterialIcons name="phone" size={24} color="#800000" backgroundColor="#8000002d" style={{ padding: 8, borderRadius: 6 }} />
+                <MaterialIcons name="phone" size={24} color={colors.primary} backgroundColor={colors.primary + '2d'} style={{ padding: 8, borderRadius: 6 }} />
                 <View>
-                    <CustomText style={{ fontSize: 12, fontFamily: 'Poppins-SemiBold', color: '#818181' }}                >
+                    <CustomText style={{ fontSize: 12, fontFamily: 'Poppins-SemiBold', color: colors.textSecondary }}>
                         PHONE NUMBER
                     </CustomText>
-
-                    <CustomText style={{ fontSize: 16 }} >+92 300 1234567</CustomText>
+                    <CustomText style={{ fontSize: 16, color: colors.text }}>+92 300 1234567</CustomText>
                 </View>
             </View>
         </View>

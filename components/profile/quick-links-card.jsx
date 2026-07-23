@@ -1,13 +1,15 @@
 import { MaterialIcons } from '@expo/vector-icons';
 import { TouchableOpacity, View } from 'react-native';
 import CustomText from '../CustomText';
+import { useTheme } from '../../theme/useTheme';
 
-const ContactCard = ({ data }) => {
+const QuickLinksCard = ({ data }) => {
+    const { colors } = useTheme();
     return (
         <View
             style={{
                 width: '90%',
-                backgroundColor: '#ffff',
+                backgroundColor: colors.card,
                 borderRadius: 20,
                 marginTop: 20,
                 paddingVertical: 20,
@@ -16,7 +18,7 @@ const ContactCard = ({ data }) => {
                 alignSelf: 'center',
             }}
         >
-            <CustomText style={{ fontFamily: 'Poppins-SemiBold' }}                >
+            <CustomText style={{ fontFamily: 'Poppins-SemiBold', color: colors.text }}>
                 Quick Links
             </CustomText>
 
@@ -31,13 +33,13 @@ const ContactCard = ({ data }) => {
                     }}
                     onPress={item.onPress}
                 >
-                    <MaterialIcons name={item.icon} size={24} />
-                    <CustomText>{item.label}</CustomText>
-                    <MaterialIcons name="chevron-right" size={24} style={{ position: 'absolute', right: 10 }} />
+                    <MaterialIcons name={item.icon} size={24} color={colors.text} />
+                    <CustomText style={{ color: colors.text }}>{item.label}</CustomText>
+                    <MaterialIcons name="chevron-right" size={24} color={colors.text} style={{ position: 'absolute', right: 10 }} />
                 </TouchableOpacity>
             ))}
         </View>
     );
 }
 
-export default ContactCard;
+export default QuickLinksCard;

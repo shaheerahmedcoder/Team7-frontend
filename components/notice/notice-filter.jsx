@@ -2,17 +2,19 @@
 //Simple reusable component for notice filter
 
 import CustomText from '@/components/CustomText';
-import { ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { ScrollView, TouchableOpacity, View } from 'react-native';
+import { useTheme } from '../../theme/useTheme';
 
 const NoticeFilter = ({ activeFilter, onFilterChange }) => {
+    const { colors } = useTheme();
     const filters = ['All', 'Exams', 'Events', 'Academic', 'General'];
 
     return (
-        <View style={styles.container}>
+        <View style={{ paddingVertical: 10 }}>
             <ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                contentContainerStyle={styles.scrollContent}
+                contentContainerStyle={{ paddingHorizontal: 20, gap: 12, flexDirection: 'row' }}
             >
                 {filters.map((filter) => {
                     const isActive = activeFilter === filter;
@@ -21,14 +23,16 @@ const NoticeFilter = ({ activeFilter, onFilterChange }) => {
                             key={filter}
                             onPress={() => onFilterChange(filter)}
                             style={[
-                                styles.filterButton,
-                                isActive ? styles.activeButton : styles.inactiveButton
+                                { paddingHorizontal: 24, paddingVertical: 8, borderRadius: 20, borderWidth: 1 },
+                                isActive 
+                                ? { backgroundColor: colors.primary, borderColor: colors.primary } 
+                                : { backgroundColor: colors.card, borderColor: colors.border }
                             ]}
                         >
                             <CustomText
                                 style={[
-                                    styles.filterText,
-                                    isActive ? styles.activeText : styles.inactiveText
+                                    { fontSize: 14, fontFamily: 'Poppins-Medium' },
+                                    isActive ? { color: '#fff' } : { color: colors.textSecondary }
                                 ]}
                             >
                                 {filter}
@@ -40,40 +44,5 @@ const NoticeFilter = ({ activeFilter, onFilterChange }) => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        paddingVertical: 10,
-    },
-    scrollContent: {
-        paddingHorizontal: 20,
-        gap: 12,
-        flexDirection: 'row',
-    },
-    filterButton: {
-        paddingHorizontal: 24,
-        paddingVertical: 8,
-        borderRadius: 20,
-        borderWidth: 1,
-    },
-    inactiveButton: {
-        backgroundColor: '#fff',
-        borderColor: '#e2e8f0',
-    },
-    activeButton: {
-        backgroundColor: '#8a0000',
-        borderColor: '#8a0000',
-    },
-    filterText: {
-        fontSize: 14,
-        fontFamily: 'Poppins-Medium',
-    },
-    inactiveText: {
-        color: '#64748b',
-    },
-    activeText: {
-        color: '#fff',
-    },
-});
 
 export default NoticeFilter;
